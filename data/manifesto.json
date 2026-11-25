@@ -1,0 +1,8 @@
+﻿{
+  "dataset_id": "chamados-v1",
+  "origem": "Exemplos sintéticos criados para a Atividade Prática 04",
+  "arquivos": ["data/chamados.csv.dvc", "data/split.csv.dvc"],
+  "esquema": {"id": "texto único", "texto": "descrição", "classe": ["comum", "urgente"]},
+  "regra_de_rotulagem": "Queda, falha crítica e bloqueio são urgentes. Cadastro e dúvida são comuns.",
+  "alteracao": "Snapshot inicial com erro de anotação intencional no ID 006."
+}

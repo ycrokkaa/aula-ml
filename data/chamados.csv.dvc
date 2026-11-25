@@ -1,0 +1,5 @@
+outs:
+- md5: 8fead0c04eb5043fe59ff5a8d6db4a1c
+  size: 325
+  hash: md5
+  path: chamados.csv
