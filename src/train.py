@@ -22,12 +22,15 @@ def sha256(caminho):
     return hashlib.sha256(Path(caminho).read_bytes()).hexdigest()
 
 def token(texto):
-    return texto.lower().split()
+    return texto.lower().split()[0]
 
 def classe_majoritaria(contagens):
     return min(contagens, key=lambda classe: (-contagens[classe], classe))
 
-model_id = sys.argv
+if len(sys.argv) != 2:
+    raise SystemExit("Uso: python src/train.py <model_id>")
+
+model_id = sys.argv[1]
 dataset = json.loads(Path("data/manifesto.json").read_text(encoding="utf-8-sig"))
 params = json.loads(Path("params.json").read_text(encoding="utf-8-sig"))
 if params != {"tokenizador": "primeira_palavra_minuscula"}:
